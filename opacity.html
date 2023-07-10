@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity</title>
+    <style>
+        .map {
+            width: 400px;
+            height: 280px;
+            /* background size 簡寫 -> 一定要設在position後面，並且加斜線 */
+            background: url(/example/images/map.png) center center/cover;
+            opacity: .5;
+            transition: .4s;
+        }
+        .map:hover {
+            opacity: 1;
+            width: 420px;
+            height: 300px;
+        }
+        .map h1 {
+            opacity: .5;
+        }
+    </style>
+</head>
+<body>
+    <div class="map">
+        <h1>U.S.A</h1>
+    </div>
+</body>
+</html>

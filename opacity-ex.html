@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opacity-ex</title>
+    <style>
+        body {
+            /* background-color: #000000; */
+        }
+        .box-wrap {
+            position: relative;
+            background-color: #000;
+            width: 400px;
+        }
+        .box {
+            width: 400px;
+            height: 300px;
+            background: url(/example/images/slide1.jpeg) center center/cover;
+            transition: .4s;
+        }
+        .box-wrap:hover .box {
+            opacity: .4;
+        }
+        .box-wrap h3 {
+            position: absolute;
+            color: aliceblue;
+            opacity: .4;
+            transition: .4s;
+            bottom: 0;
+            /* left: 50%;
+            transform: translatex(-50%); */
+            text-align: center;
+            width: 100%;
+            /* 讓文字清楚的方法一：加shadow */
+            text-shadow: 0 0 5px #000;
+            /* -------用漸層增加質感------- */
+            background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.8));
+            /* 方法二：加background條，並且將margin設為0，加上padding */
+            /* background: #3c3b3b;
+            margin: 0;
+            padding: 10px 0; */
+
+        }
+        .box-wrap:hover h3 {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-wrap">
+        <div class="box">
+            
+        </div>
+        <h3>高雄總圖書館</h3>
+    </div>
+</body>
+</html>

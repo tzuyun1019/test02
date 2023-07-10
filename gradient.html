@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient</title>
+    <style>
+        .box {
+            height: 120px;
+            /* 一次設定margin上下 */
+            margin-block: 20px;
+            /* 一次設定margin左右 */
+            /* margin-inline: 10px; */
+        }
+        .gra1 {
+            background-image: linear-gradient(pink,rgb(205, 254, 255));
+        }
+        .gra2 {
+            /* 方向預設：to bottom */
+            background: linear-gradient(to top, pink,rgb(205,254,255));
+        }
+        .gra3 {
+            background: linear-gradient(30deg, pink, rgb(205,254,255));
+        }
+        .gra4 {
+            background: linear-gradient(to right, rgb(249, 80, 80), rgb(248, 248, 80), rgb(80, 255, 80), rgb(80, 80, 255), rgb(255, 80, 255));
+        }
+        .gra5 {
+            background: linear-gradient(to right, red 100px, yellow, green 60%, blue, purple 90%);
+        }
+        .gra6 {
+            background: linear-gradient(to left, rgb(187, 64, 64),rgba(255,193,86,.7));
+        }
+        .gra7 {
+            background: linear-gradient(to right, rgb(181, 59, 59) 50%, rgb(68, 163, 203) 50%);
+        }
+        .gra8 {
+            background: linear-gradient(to right, white 50%, #ccc 50%);
+            background-size: 40px auto;
+        }
+        .gra9 {
+            background: repeating-linear-gradient(to right, pink, rgb(205,254,255) 100px);
+        }
+        .gra10 {
+            background: repeating-linear-gradient(to right, white 0, white 20px, #ccc 20px, #ccc 40px,yellow 40px, yellow 60px);
+        }
+        .button {
+            /*  金屬質感按鍵 */
+            background: linear-gradient(to bottom, #fff, #ccc 5%, #fff 50%, #525252 50%, #333 90%, #ccc);
+            padding: 10px 20px;
+            display: inline-block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            border-radius: 4px;
+            color: #fff;
+            box-shadow: 0 0 6px #fff inset, 0 0 5px #000;
+            text-shadow: 0 -1px 1px #000;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box gra1">linear-gradient</div>
+    <div class="box gra2">linear-gradient-to top</div>
+    <div class="box gra3">linear-gradient-degger</div>
+    <div class="box gra4"></div>
+    <div class="box gra5"></div>
+    <div class="box gra6"></div>
+    <div class="box gra7"></div>
+    <div class="box gra8"></div>
+    <div class="box gra9"></div>
+    <div class="box gra10"></div>
+    <a class="button">button</a>
+</body>
+</html>

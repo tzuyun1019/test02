@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radial Gradient</title>
+    <style>
+        .box {
+            width: 240px;
+            height: 160px;
+            margin: 20px;
+        }
+        .gra1 {
+            background: radial-gradient(#f97a8f, #ffe055);
+        }
+        .gra2 {
+            background: radial-gradient(rgb(248, 80, 80), orange, yellow, yellowgreen, rgb(89, 104, 203));
+        }
+        .gra3 {
+            background: radial-gradient(rgb(248, 80, 80), orange, yellow, yellowgreen 60%, rgb(89, 104, 203) 80%);
+        }
+        .gra4 {
+            background: radial-gradient(circle, #ffe055, #f97a8f);
+        }
+        .gra5 {
+            background: radial-gradient(at 50px top,#f97a8f, #ffe055);
+        }
+        .gra6 {
+            background: radial-gradient(circle at 80px top,#f97a8f, #ffe055);
+        }
+        .gra7 {
+            background: repeating-radial-gradient(#f97a8f,#ad6dd8 20px, #f97a8f 40px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box gra1"></div>
+    <div class="box gra2"></div>
+    <div class="box gra3"></div>
+    <div class="box gra4"></div>
+    <div class="box gra5"></div>
+    <div class="box gra6"></div>
+    <div class="box gra7"></div>
+</body>
+</html>

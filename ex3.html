@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex2</title>
+    <style>
+      body {
+        background: #fff9d8;
+      }
+      .card {
+        background: #fff;
+        border-radius: 10px;
+        width: 300px;
+        /* height: 400px; */
+        margin: 20px auto;
+        /* padding: 20px; */
+        box-shadow: 0 5px 10px #5d6c7c;
+        /* 文字居中可繼承給容器裡的所有元素 */
+        text-align: center;
+        position: relative;
+      }
+      .banner {
+        height: 150px;
+        background: url(/example/images/cat_house.jpeg) center center;
+        background-size: cover;
+      }
+      .avatar {
+        width: 120px;
+        height: 120px;
+        background-color: #000;
+        border-radius: 50%;
+        box-shadow: 2px 5px 4px rgb(135, 111, 81);
+        overflow: hidden;
+        /* 上下卡圖像的方法一：改變margin和content的padding */
+        /* margin: -60px auto; */
+        /* 方法二 : position: absolute，但是要記得在它的上一層去設定position，不然會以瀏覽器為參考值(縮放大小就會亂跑)*/
+        /* position: absolute;
+        left: 50%;
+        margin: 0 0 0 -60px; */
+        /* 方法三：用calc */
+        /* margin: 0;
+        position: absolute;
+        left: calc(50% - 60px); */
+        /* 方法四：用transform */
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 87px;
+      }
+      .avatar img {
+        height: auto;
+        max-width: 100%;
+      }
+      .content {
+        border: 20px solid transparent;
+        border-image: url(/example/images/border-image2.png) 20 round;
+        padding-top: 30px;
+      }
+      .card h3 {
+        border-bottom: 1px solid #deb887;
+        padding-bottom: 10px;
+        font-size: 24px;
+      }
+      .btn {
+        display: block;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+45,ff5c5c+100;Red+3D+%231 */
+        background: #febbbb; /* Old browsers */
+        background: -moz-linear-gradient(
+          top,
+          #febbbb 0%,
+          #fe9090 45%,
+          #ff5c5c 100%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+          top,
+          #febbbb 0%,
+          #fe9090 45%,
+          #ff5c5c 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(
+          to bottom,
+          #febbbb 0%,
+          #fe9090 45%,
+          #ff5c5c 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#febbbb', endColorstr='#ff5c5c',GradientType=0 ); /* IE6-9 */
+        color: #fff;
+        padding-block: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background: #ff5c5c;
+      }
+      .loading {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        width: 160px;
+        margin: -80px 0 0 -80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="banner"></div>
+      <figure class="avatar">
+        <img src="/example/images/cute_cat.jpg" alt="" height="500" />
+      </figure>
+      <div class="content">
+        <h3>Ms. Cute</h3>
+        <p>Hello, I'm a cute cat. Meow</p>
+        <!-- role可增加SEO -->
+        <a class="btn" role="button">Follow Me</a>
+      </div>
+    </div>
+    <!-- <img class="loading" src="/example/images/loading-2.svg" alt="" /> -->
+  </body>
+</html>
